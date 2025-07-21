@@ -8,4 +8,5 @@ CMD [ "npm", "run", "build" ]
 
 # Run Phase
 FROM nginx:stable-alpine-perl
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
